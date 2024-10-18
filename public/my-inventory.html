@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Inventory</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/my-inventory.js" defer></script>
+    <script src="js/displaySchoolName.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>My Inventory</h1>
+        <div class="button-container">
+          <a href="index.html" id="logout-btn">Log Out</a>
+          <a href="inventory.html" id="back-btn">Back to Inventory</a>
+        </div>
+        <div
+          id="schoolNameDisplay"
+          style="float: right; margin-right: 10px"
+        ></div>
+      </nav>
+    </header>
+
+    <main>
+      <h2 style="margin-left: 30px">Your Products</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+            <!-- New column for actions -->
+          </tr>
+        </thead>
+        <tbody id="inventory-table-body">
+          <!-- Inventory rows will be dynamically populated here -->
+        </tbody>
+      </table>
+      <button id="scrollToTopBtn">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="12" cy="12" r="12" fill="none" />
+          <path
+            d="M12 19V5M12 5L5 12M12 5L19 12"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </main>
+  </body>
+</html>

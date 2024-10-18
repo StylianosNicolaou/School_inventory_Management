@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>School Inventory System</h1>
+      <div class="button-container">
+        <a href="index.html">Log Out</a>
+        <a href="my-inventory.html">My Inventory</a>
+      </div>
+      <div
+        id="schoolNameDisplay"
+        style="float: right; margin-right: 10px"
+      ></div>
+    </nav>
+
+    <div class="container">
+      <h2>Products</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody id="product-table-body">
+          <!-- Products will be inserted here -->
+        </tbody>
+      </table>
+      <button id="submit-inventory">Submit Inventory</button>
+      <button id="scrollToTopBtn">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="12" cy="12" r="12" fill="none" />
+          <path
+            d="M12 19V5M12 5L5 12M12 5L19 12"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+    <script src="js/inventory.js"></script>
+    <script src="js/displaySchoolName.js"></script>
+    <script src="js/logout.js"></script>
+  </body>
+</html>

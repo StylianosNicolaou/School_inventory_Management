@@ -1,0 +1,15 @@
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
