@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif; /* Modern sans-serif font */
+  background-color: #f9f9f9; /* Very light gray for a soft look */
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background: #003366; /* Dark navy blue for a professional look */
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav h1 {
+  font-size: 1.8rem; /* Reduced size for better layout */
+  margin: 0; /* Remove default margin */
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500; /* Lighter font weight for a clean look */
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #cce5ff; /* Lighter blue on hover */
+}
+
+.container {
+  max-width: 900px; /* Increased width for better content display */
+  margin: 30px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px; /* Added space below the heading */
+  font-size: 2rem;
+  color: #ffffff; /* Matching color with nav */
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0; /* Increased margin for better spacing */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #003366; /* Consistent focus color */
+}
+
+select {
+  background: white; /* Background color for dropdown */
+  appearance: none; /* Remove default styling */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>'); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Position the arrow */
+  background-size: 12px; /* Size of the arrow */
+}
+
+option {
+  padding: 12px; /* Padding for options */
+}
+
+/* School name display */
+#schoolNameDisplay {
+  color: #fff;
+  font-style: italic;
+  font-size: large;
+}
+
+button {
+  background: #0056b3; /* Darker blue for actions */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600; /* Bolder button text */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #004494; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift button on hover */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #003366; /* Consistent with nav color */
+  color: white;
+  font-weight: bold;
+}
+
+td img {
+  width: 50px;
+  height: auto;
+  border-radius: 4px; /* Rounded corners for images */
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container {
+    margin: 10px; /* Reduce margin on smaller screens */
+    padding: 15px; /* Adjust padding for mobile */
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Adjust font size for smaller screens */
+  }
+}
+
+.product-image {
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.product-image:hover {
+  transform: scale(2); /* Slightly enlarge the image on hover */
+  cursor: pointer; /* Show a pointer cursor on hover */
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: none; /* Hidden by default */
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+#scrollToTopBtn svg {
+  width: 24px;
+  height: 24px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  position: relative; /* Set position for absolute child alignment */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  flex-grow: 1;
+}
+
+#login-btn,
+#register-btn {
+  margin: 0 10px; /* Spacing between buttons */
+  color: rgb(255, 255, 255); /* Change color as needed */
+  padding: 10px 15px; /* Add padding to buttons */
+  transition: background-color 0.3s; /* Optional: smooth background color transition */
+}
+
+#login-btn:hover,
+#register-btn:hover {
+  color: #cce5ff; /* Lighter blue on hover */
+}
+
+#logout-btn,
+#back-btn {
+  margin: 0 10px; /* Spacing between buttons */
+  color: rgb(255, 255, 255); /* Change color as needed */
+  padding: 10px 15px; /* Add padding to buttons */
+  transition: background-color 0.3s; /* Optional: smooth background color transition */
+}
+
+#logout-btn:hover,
+#back-btn:hover {
+  color: #cce5ff; /* Lighter blue on hover */
+}
+
+#schoolNameDisplay {
+  margin-right: 10px; /* Margin for the school name display */
+}
+
+#home_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50%;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: white; /* Text color */
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+nav h1 {
+  margin-right: auto;
+  font-size: 24px; /* Adjust as needed */
+  color: #ffffff;
+}
+
+nav a:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}

@@ -1,0 +1,101 @@
+id,name,description,image_path
+LM-01,Universal scroll saw,Παλινδρομικό ηλεκτρικό ξεγυριστάρι,http://localhost:8000/images/image_row_2.png
+LM-02,Pillar drill,Δράπανο στήλης,http://localhost:8000/images/image_row_3.png
+LM-03,Face sanding machine,Ηλεκτρικό δισκοτριβείο,http://localhost:8000/images/image_row_4.png
+LM-04,Air compressor,Αεροσυμπιεστής,http://localhost:8000/images/image_row_5.png
+LM-05,Vacuum forming machine,Μηχανή φορμαρίσματος πλαστικών,http://localhost:8000/images/image_row_6.png
+LM-06,Bubble etch tank,Συσκευή αποχάλκωσης,http://localhost:8000/images/image_row_7.png
+LM-07,UV exposure unit,Συσκευή φωτογράφησης με ακτινοβολία UV,http://localhost:8000/images/image_row_8.png
+LM-08,Miniature PCB drill set,Μικροτράπανο πλακετών με βάση και μετασχηματιστή,http://localhost:8000/images/image_row_9.png
+LM-09,PCB shear,Κοπτήρας πλακετών,http://localhost:8000/images/image_row_10.png
+LM-10,Regulated power supply unit,Τροφοδοτικό DC με σταθεροποιημένη τάση εξόδου,http://localhost:8000/images/image_row_11.png
+LM-10a,Regulated power supply unit,Τροφοδοτικό AC/DC με σταθεροποιημένη τάση εξόδου,http://localhost:8000/images/image_row_12.png
+LM-10.b,Regulated DC Power Supply Unit 2A,Τροφοδοτικό DC 2A,http://localhost:8000/images/image_row_13.png
+LM-10.3,Regulated DC Power Supply Unit 1.4A,Τροφοδοτικό DC 1.4A,http://localhost:8000/images/image_row_14.png
+LM-11,Materials testing apparatus set,Συσκευή δοκιμής αντοχής υλικών,http://localhost:8000/images/image_row_15.png
+LM-12,Band saw,Πριονοκορδέλα,http://localhost:8000/images/row_16.png
+LM-13,3-Axes CNC milling machine,Μηχανή CNC,http://localhost:8000/images/image_row_17.png
+LM-14,Analogue multimeter,Αναλογικό πολύμετρο,http://localhost:8000/images/image_row_18.png
+LM-15,Digital multimeter,Ψηφιακό πολύμετρο,http://localhost:8000/images/image_row_19.png
+LM-16.1,Serial interface accessory pack (model: 172) για Control & Datacapture (LDR, θερμ.),Deltronics Αισθητήρες Inputs - για Control IT Box (μαγνητικός, LDR, θερμ., Υγρ.),http://localhost:8000/images/image_row_20.png
+LM-16.2,Deltronics digital serial adaptor set (model:185 pc/25),Εξάρτημα σειριακής σύνδεσης deltronics με Η/Υ,http://localhost:8000/images/image_row_21.png
+LM-17,Components tester (atlas),Ελεγκτής Εξαρτημάτων (atlas),http://localhost:8000/images/image_row_22.png
+LM-16,Deltronics Control and Datacapture,Συσκευές διασύνδεσης με Η.Υ.,http://localhost:8000/images/image_row_23.png
+LM-16,Deltronics Control IT buffer box,Συσκευές διασύνδεσης με Η.Υ.,http://localhost:8000/images/image_row_24.png
+LM-16,Deltronics Control it plus,Συσκευές διασύνδεσης με Η.Υ.,http://localhost:8000/images/row_25.png
+LM-18,Electronics teaching pack A – set (Full),Πακέτο A ηλεκτρονικών ΩΜΕΓΑ – Πλήρες (10 κομμάτια),http://localhost:8000/images/image_row_26.png
+LM-18.2,Electronics teaching pack B – set (Part),Πακέτο B ηλεκτρονικών ΩΜΕΓΑ – Ημιτελές (3 κομμάτια),http://localhost:8000/images/image_row_27.png
+LM-21,Manual press machine,Εργαλείο εφαρμογής κουμπιών,http://localhost:8000/images/image_row_28.png
+LM-22,Plastic ring binding machine,Μηχανή δεσίματος (εργασιών) - spiral,http://localhost:8000/images/image_row_29.png
+LM-23,Laminator machine,Μηχανή πλαστικοποίησης,http://localhost:8000/images/image_row_30.png
+LM-24,Low voltage soldering iron,Σετ κασσιτεροκόλλησης χαμηλής τάσης,http://localhost:8000/images/image_row_31.png
+LM-25,Dust extractor,Απορροφητήρας σκόνης,http://localhost:8000/images/image_row_32.png
+LM-26,Overhead projector with screen,Επιδιασκόπιο με οθόνη προβολής,http://localhost:8000/images/image_row_33.png
+VA-01,Samsung Digital Presenter,Ψηφιακό Επιδιασκόπιο,http://localhost:8000/images/image_row_34.png
+LM-27,Strip heater,Μηχανή λυγίσματος πλαστικών,http://localhost:8000/images/image_row_35.png
+LM-28a/28,Pic ZIF programmer and axe27 cable,Σύστημα προγραμματισμού ZIF για μικροελεγκτές PIC και καλώδιο ΑΧΕ27,http://localhost:8000/images/image_row_36.png
+LM-28.1,Analogue calibration board,Πλακέτα ρύθμισης αναλογικών εισόδων PICS,http://localhost:8000/images/image_row_37.png
+LM-29,Pneumatic control set,Σετ πνευματικού ελέγχου,http://localhost:8000/images/image_row_38.png
+LM-65,Compressed air manifold,Διανομέας Πιεσμένου Αέρα,http://localhost:8000/images/image_row_39.png
+LM-65.1,Pneumatics connections Kit,Σετ πνευματικών συνδέσμων,http://localhost:8000/images/image_row_40.png
+LM-31,Portable jig saw,Φορητό ηλεκτρικό πριόνι,http://localhost:8000/images/image_row_41.png
+LM-35,Generator model type A,Γεννήτρια τύπου Α,http://localhost:8000/images/image_row_42.png
+LM-36,STRUCTURE pack model: 9618 Lego,Σετ Structures_Lego για κατασκευές,http://localhost:8000/images/image_row_43.png
+LM-37,TRONIX Electronics kit (Box),Σετ ηλεκτρονικών Tronix,http://localhost:8000/images/image_row_44.png
+LM-38,Toy vehicle,Αυτοκίνητο – παιγνίδι για σύνδεση με Η/Υ,http://localhost:8000/images/image_row_45.png
+LM-40,Fiber optics set,Σετ πομπού/δέκτη οπτικών ινών,http://localhost:8000/images/image_row_46.png
+LM-41,Robotic arm kit,Ρομποτικός βραχίονας,http://localhost:8000/images/image_row_47.png
+LM-42,Pelican crossing simulating,Εξομοίωση φώτων τροχαίας/διάβασης πεζών σε Η/Υ,http://localhost:8000/images/image_row_48.png
+LM-43,Lift simulating unit kit,Εξομοίωση ανελκυστήρα σε Η/Υ,http://localhost:8000/images/image_row_49.png
+LM-44,Water Heater & temperature control kit,Θερμοσίφωνας με έλεγχο θερμοκρασίας,http://localhost:8000/images/image_row_50.png
+LM-45,Tricorbot,Τρίτροχο ρομποτικό όχημα,http://localhost:8000/images/image_row_51.png
+LM-46,Springboard,Σκηνίδιο διαλείμματος - springboard,http://localhost:8000/images/image_row_52.png
+LM-47,Bridge building kit,Σετ κατασκευής γεφυρών,http://localhost:8000/images/image_row_53.png
+LM-48,Water wheel,Νεροτριβή,http://localhost:8000/images/image_row_54.png
+LM-49,Light sensor,Αισθητήρας φωτός,http://localhost:8000/images/image_row_55.png
+LM-50,Electronic dice,Ηλεκτρονικός ζάρι,http://localhost:8000/images/image_row_56.png
+LM-51,Robotic arm,Ρομποτικός βραχίονας,http://localhost:8000/images/image_row_57.png
+LM-52,Mechanical claw,Μηχανικός γάντζος,http://localhost:8000/images/image_row_58.png
+LM-53,Smart car,Έξυπνο αυτοκίνητο,http://localhost:8000/images/image_row_59.png
+LM-54,Solar panel kit,Σετ ηλιακών συλλεκτών,http://localhost:8000/images/image_row_60.png
+LM-55,Mini robot,Μίνι ρομπότ,http://localhost:8000/images/image_row_61.png
+LM-56,Infrared sensor,Αισθητήρας υπερύθρων,http://localhost:8000/images/image_row_62.png
+LM-57,Servo motor,Σερβοκινητήρας,http://localhost:8000/images/image_row_63.png
+LM-58,Temperature sensor,Αισθητήρας θερμοκρασίας,http://localhost:8000/images/image_row_64.png
+LM-59,Humidity sensor,Αισθητήρας υγρασίας,http://localhost:8000/images/image_row_65.png
+LM-60,Pressure sensor,Αισθητήρας πίεσης,http://localhost:8000/images/image_row_66.png
+LM-61,Gas sensor,Αισθητήρας αερίου,http://localhost:8000/images/image_row_67.png
+LM-62,Ultrasonic sensor,Αισθητήρας υπερήχων,http://localhost:8000/images/image_row_68.png
+LM-63,Color sensor,Αισθητήρας χρώματος,http://localhost:8000/images/image_row_69.png
+LM-64,LED strip kit,Σετ LED strip,http://localhost:8000/images/image_row_70.png
+LM-65,Electronic music kit,Σετ ηλεκτρονικής μουσικής,http://localhost:8000/images/image_row_71.png
+LM-66,Smart home kit,Σετ έξυπνου σπιτιού,http://localhost:8000/images/image_row_72.png
+LM-67,VR headset,VR headset,http://localhost:8000/images/image_row_73.png
+LM-68,AR glasses,AR γυαλιά,http://localhost:8000/images/image_row_74.png
+LM-69,Drone,Drone,http://localhost:8000/images/image_row_75.png
+LM-70,3D printer,3D εκτυπωτής,http://localhost:8000/images/image_row_76.png
+LM-71,Laser cutter,Λέιζερ κοπής,http://localhost:8000/images/image_row_77.png
+LM-72,PCB printer,Εκτυπωτής πλακετών,http://localhost:8000/images/image_row_78.png
+LM-73,CNC router,Router CNC,http://localhost:8000/images/image_row_79.png
+LM-74,Electronic toolkit,Σετ εργαλείων ηλεκτρονικών,http://localhost:8000/images/image_row_80.png
+LM-75,Robot arm kit,Σετ ρομποτικού βραχίονα,http://localhost:8000/images/image_row_81.png
+LM-76,Drone racing kit,Σετ αγώνων Drone,http://localhost:8000/images/image_row_82.png
+LM-77,Self-driving car kit,Σετ αυτοκινήτου αυτόνομης οδήγησης,http://localhost:8000/images/image_row_83.png
+LM-78,Robot competition kit,Σετ ρομποτικού διαγωνισμού,http://localhost:8000/images/image_row_84.png
+LM-79,Circuit design kit,Σετ σχεδίασης κυκλωμάτων,http://localhost:8000/images/image_row_85.png
+LM-80,Raspberry Pi kit,Σετ Raspberry Pi,http://localhost:8000/images/image_row_86.png
+LM-81,Arduino starter kit,Σετ εκκίνησης Arduino,http://localhost:8000/images/image_row_87.png
+LM-82,Robotics programming kit,Σετ προγραμματισμού ρομποτικής,http://localhost:8000/images/image_row_88.png
+LM-83,Smartphone development kit,Σετ ανάπτυξης smartphone,http://localhost:8000/images/image_row_89.png
+LM-84,IoT development kit,Σετ ανάπτυξης IoT,http://localhost:8000/images/image_row_90.png
+LM-85,Wireless communication kit,Σετ ασύρματης επικοινωνίας,http://localhost:8000/images/image_row_91.png
+LM-86,Sensor development kit,Σετ ανάπτυξης αισθητήρων,http://localhost:8000/images/image_row_92.png
+LM-87,Home automation kit,Σετ αυτοματισμού σπιτιού,http://localhost:8000/images/image_row_93.png
+LM-88,Smart agriculture kit,Σετ έξυπνης γεωργίας,http://localhost:8000/images/image_row_94.png
+LM-89,Smart healthcare kit,Σετ έξυπνης υγειονομικής περίθαλψης,http://localhost:8000/images/image_row_95.png
+LM-90,Smart transportation kit,Σετ έξυπνης μεταφοράς,http://localhost:8000/images/image_row_96.png
+LM-91,Smart security kit,Σετ έξυπνης ασφάλειας,http://localhost:8000/images/image_row_97.png
+LM-92,Smart energy management kit,Σετ έξυπνης διαχείρισης ενέργειας,http://localhost:8000/images/image_row_98.png
+LM-93,Smart waste management kit,Σετ έξυπνης διαχείρισης απορριμμάτων,http://localhost:8000/images/image_row_99.png
+LM-94,Smart environmental monitoring kit,Σετ έξυπνης περιβαλλοντικής παρακολούθησης,http://localhost:8000/images/image_row_100.png
+LM-95,Smart city kit,Σετ έξυπνης πόλης,http://localhost:8000/images/image_row_101.png
