@@ -126,23 +126,46 @@ table {
   margin: 20px 0;
 }
 
-th,
-td {
+/* Ensure table columns are aligned and text is centered for quantities */
+th {
+  white-space: nowrap; /* Prevent wrapping of headers */
   padding: 15px;
   text-align: left;
   border-bottom: 1px solid #ddd;
-}
-
-th {
-  background-color: #003366; /* Consistent with nav color */
+  background-color: #003366; /* Your header background color */
   color: white;
   font-weight: bold;
 }
 
+td {
+  padding: 15px;
+  text-align: left; /* Default alignment for text in other columns */
+  border-bottom: 1px solid #ddd;
+}
+
 td img {
-  width: 50px;
+  width: 80px;
   height: auto;
-  border-radius: 4px; /* Rounded corners for images */
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+td img:hover {
+  transform: scale(1.5); /* Slightly enlarge the image on hover */
+  cursor: pointer; /* Show a pointer cursor on hover */
+}
+
+/* Center the numbers in the Current Quantity and Quantity columns */
+td.current-quantity,
+td.quantity {
+  text-align: center; /* Center the text for these columns */
+  vertical-align: middle; /* Vertically center the content */
+  white-space: nowrap; /* Prevent the content from wrapping */
+}
+
+/* Align input fields */
+td.quantity input {
+  width: 60px; /* Adjust input field width */
+  text-align: center; /* Center text inside the input field */
 }
 
 @media (max-width: 600px) {

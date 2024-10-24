@@ -1,4 +1,29 @@
 // Fetch and display products
+// function fetchAndDisplayProducts() {
+//   fetch("/inventory/products")
+//     .then((response) => response.json())
+//     .then((products) => {
+//       const productTableBody = document.getElementById("product-table-body");
+//       productTableBody.innerHTML = ""; // Clear existing table data
+
+//       products.forEach((product) => {
+//         const row = document.createElement("tr");
+//         row.innerHTML = `
+//           <td>${product.id}</td>
+//           <td>${product.name}</td>
+//           <td>${product.description}</td>
+//           <td><img class="product-image" src="${product.image_path}" alt="${product.name}" width="100px" /></td>
+//           <td>
+//             <input type="number" min="0" max="10" value="0" data-product-id="${product.id}" />
+//           </td>
+//         `;
+
+//         productTableBody.appendChild(row);
+//       });
+//     })
+//     .catch((error) => console.error("Error fetching products:", error));
+// }
+// Fetch and display products
 function fetchAndDisplayProducts() {
   fetch("/inventory/products")
     .then((response) => response.json())
@@ -12,17 +37,20 @@ function fetchAndDisplayProducts() {
           <td>${product.id}</td>
           <td>${product.name}</td>
           <td>${product.description}</td>
-          <td><img class="product-image" src="${product.image_path}" alt="${product.name}" width="100px" /></td>
+          <td><img src="${product.image_path}" alt="${product.name}" width="100px" /></td>
+          <td class="current-quantity">${product.current_quantity}</td> <!-- Display current quantity -->
           <td>
             <input type="number" min="0" max="10" value="0" data-product-id="${product.id}" />
           </td>
         `;
-
         productTableBody.appendChild(row);
       });
     })
     .catch((error) => console.error("Error fetching products:", error));
 }
+
+// Call the function on page load
+fetchAndDisplayProducts();
 
 // Call the function on page load
 fetchAndDisplayProducts();

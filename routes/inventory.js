@@ -33,10 +33,28 @@ router.get("/", (req, res) => {
 });
 
 // Fetch all products
+// router.get("/products", (req, res) => {
+//   const query = "SELECT * FROM products";
+//   db.query(query, (err, results) => {
+//     if (err) return res.status(500).send(err);
+//     res.json(results);
+//   });
+// });
 router.get("/products", (req, res) => {
-  const query = "SELECT * FROM products";
-  db.query(query, (err, results) => {
-    if (err) return res.status(500).send(err);
+  const schoolName = req.session.schoolName; // Assuming schoolName is in the session
+
+  const query = `
+    SELECT p.id, p.name, p.description, p.image_path, 
+           COALESCE(si.quantity, 0) AS current_quantity
+    FROM products p
+    LEFT JOIN submitted_inventory si 
+    ON p.id = si.product_id AND si.school_name = ?
+  `;
+
+  db.query(query, [schoolName], (err, results) => {
+    if (err) {
+      return res.status(500).json({ error: "Error fetching products" });
+    }
     res.json(results);
   });
 });
