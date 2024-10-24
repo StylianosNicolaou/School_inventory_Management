@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const session = require("express-session");
 const bodyParser = require("body-parser");
-const { db } = require("./models/db"); // Make sure this file exports a MySQL connection
+const { db } = require("./models/db"); // MySQL connection
 const authRoutes = require("./routes/auth");
 const inventoryRoutes = require("./routes/inventory");
 const adminRoutes = require("./routes/admin");
@@ -35,16 +35,18 @@ app.use("/admin", adminRoutes);
 app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "login.html"));
 });
+
 app.get("/register", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "register.html"));
 });
+
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // Fetch submitted products for the current school
 app.get("/api/my-inventory", (req, res) => {
-  const schoolId = req.session.schoolId; // Get the current school ID from session
+  const schoolId = req.session.schoolId;
   db.query(
     "SELECT p.id, p.name, p.description, p.image_path, si.quantity FROM products p JOIN submitted_inventory si ON p.id = si.product_id WHERE si.quantity > 0 AND si.school_id = ?",
     [schoolId],
