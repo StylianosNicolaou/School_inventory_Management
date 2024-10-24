@@ -18,7 +18,7 @@ document
       const result = await response.json();
 
       if (response.ok) {
-        window.location.href = "/admin.html";
+        window.location.href = "/protected/admin.html"; // Redirect to protected admin panel
       } else {
         alert(result.message);
       }
