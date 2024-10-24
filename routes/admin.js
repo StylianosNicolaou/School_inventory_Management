@@ -3,6 +3,15 @@ const router = express.Router();
 const { db } = require("../models/db");
 const bcrypt = require("bcrypt");
 
+// Middleware to check if admin is authenticated
+function adminAuthMiddleware(req, res, next) {
+  if (req.session.adminId) {
+    next(); // Allow access if admin is authenticated
+  } else {
+    res.status(401).json({ message: "Unauthorized. Please log in." });
+  }
+}
+
 // Admin login route
 router.post("/login", (req, res) => {
   const { username, password } = req.body;
@@ -24,7 +33,7 @@ router.post("/login", (req, res) => {
       return res.status(401).json({ message: "Invalid password." });
     }
 
-    req.session.adminId = admin.id;
+    req.session.adminId = admin.id; // Set admin ID in session
     res.status(200).json({ message: "Login successful" });
   });
 });
@@ -35,12 +44,12 @@ router.get("/logout", (req, res) => {
     if (err) {
       return res.status(500).json({ message: "Logout failed." });
     }
-    res.redirect("/admin-login.html");
+    res.redirect("/admin-login.html"); // Redirect to admin login after logout
   });
 });
 
-// Fetch all schools
-router.get("/schools", (req, res) => {
+// Fetch all schools (protected by adminAuthMiddleware)
+router.get("/schools", adminAuthMiddleware, (req, res) => {
   const query = "SELECT id, school_name FROM schools";
   db.query(query, (err, results) => {
     if (err) return res.status(500).json({ error: err.message });
@@ -48,8 +57,8 @@ router.get("/schools", (req, res) => {
   });
 });
 
-// Fetch a school's inventory
-router.get("/inventory/:school_name", (req, res) => {
+// Fetch a school's inventory (protected by adminAuthMiddleware)
+router.get("/inventory/:school_name", adminAuthMiddleware, (req, res) => {
   const schoolName = req.params.school_name;
 
   const query = `
