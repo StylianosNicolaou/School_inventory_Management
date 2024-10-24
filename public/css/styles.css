@@ -268,3 +268,116 @@ nav h1 {
 nav a:hover {
   background-color: #0056b3; /* Darker shade on hover */
 }
+#admin-title {
+  background-color: #003366;
+}
+
+#admin-login-form {
+  margin-top: 10%;
+  max-width: 500px;
+  background: rgb(255, 255, 255);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Admin Panel Styles */
+#admin-panel {
+  display: flex;
+  justify-content: space-between; /* Space between the two sections */
+  align-items: flex-start; /* Align the sections to the top */
+  width: 95%; /* Take up nearly the full screen width */
+  margin: 0 auto; /* Center the panel on the page */
+  padding: 20px 0;
+}
+
+#school-list {
+  flex: 1;
+  margin-right: 20px; /* Add some spacing between the sections */
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-height: 600px; /* Set a max height for scrolling */
+  overflow-y: auto;
+}
+
+#inventory-display {
+  flex: 2; /* Make the inventory display take more space */
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#school-list li {
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#school-list button {
+  background: #0056b3;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#school-list button:hover {
+  background: #004494;
+  transform: translateY(-2px);
+}
+
+#inventory-display h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 10px;
+}
+
+#inventory-display table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+#inventory-display th,
+#inventory-display td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#inventory-display th {
+  background-color: #003366;
+  color: white;
+}
+
+#inventory-display td img {
+  width: 80px; /* Set a standard size for images */
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  /* Responsive styles for smaller devices */
+  #admin-panel {
+    flex-direction: column; /* Stack the sections on smaller screens */
+  }
+
+  #school-list {
+    margin-right: 0;
+    margin-bottom: 20px; /* Add spacing between the sections when stacked */
+  }
+}

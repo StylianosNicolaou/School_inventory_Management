@@ -3,27 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Dashboard</title>
+    <title>Admin Panel</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <nav>
-      <h1>Admin Dashboard</h1>
-      <a href="index.html">Home</a>
+      <h1>School Inventory System - Admin Panel</h1>
+      <a href="index.html" id="home_btn">Home</a>
+      <!-- Home Button for Admin -->
     </nav>
-    <div class="container">
-      <h2>Registered Schools</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>School Name</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody id="school-table-body"></tbody>
-      </table>
+
+    <div id="admin-panel">
+      <div id="school-list">
+        <!-- School list will be populated here -->
+      </div>
+
+      <div id="inventory-display">
+        <h3>School Inventory</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Product ID</th>
+              <!-- Product ID -->
+              <th>Image</th>
+              <!-- Product Image -->
+              <th>Name</th>
+              <th>Description</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody id="inventory-table-body">
+            <!-- Inventory rows will be dynamically populated here -->
+          </tbody>
+        </table>
+      </div>
     </div>
+
     <script src="js/admin.js"></script>
   </body>
 </html>
