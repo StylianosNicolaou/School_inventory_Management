@@ -1,5 +1,5 @@
 id,name,description,image_path
-LM-01,Universal scroll saw,Παλινδρομικό ηλεκτρικό ξεγυριστάρι,http://localhost:8000/images/image_row_2.png
+LM-01,Universal scroll saw,Παλινδρομικό ηλεκτρικό ξεγυριστάρι,/Users/kk/School_Inventory/images/image_row_3.png
 LM-02,Pillar drill,Δράπανο στήλης,http://localhost:8000/images/image_row_3.png
 LM-03,Face sanding machine,Ηλεκτρικό δισκοτριβείο,http://localhost:8000/images/image_row_4.png
 LM-04,Air compressor,Αεροσυμπιεστής,http://localhost:8000/images/image_row_5.png

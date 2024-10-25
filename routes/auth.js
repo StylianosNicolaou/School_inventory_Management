@@ -8,24 +8,39 @@ const path = require("path");
 router.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });
+// Route to get the logged-in school info
+router.get("/get-school-info", (req, res) => {
+  if (req.session.schoolName) {
+    res.json({ schoolName: req.session.schoolName });
+  } else {
+    res.status(401).json({ message: "Not logged in" });
+  }
+});
 
 // Registration route
 router.post("/register", async (req, res) => {
   const { school_name, email, password } = req.body;
 
-  // Hash password
+  // Hash the password
   const hashedPassword = bcrypt.hashSync(password, 10); // 10 is the salt rounds
 
   // Insert school into the database
   const query =
     "INSERT INTO schools (school_name, email, password) VALUES (?, ?, ?)";
-
   db.query(query, [school_name, email, hashedPassword], (err, results) => {
     if (err) {
       console.error("Error executing query:", err);
       return res.status(500).json({ message: "Server error." });
     }
-    res.status(200).json({ message: "School registered successfully." });
+
+    // Log in the user by saving the session
+    req.session.schoolId = results.insertId; // Set the school's unique ID
+    req.session.schoolName = school_name; // Set the school's name
+
+    // Respond with success and the session info
+    res
+      .status(200)
+      .json({ message: "School registered and logged in successfully." });
   });
 });
 

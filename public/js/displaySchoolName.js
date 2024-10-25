@@ -1,12 +1,15 @@
-// displaySchoolName.js
 document.addEventListener("DOMContentLoaded", function () {
-  const schoolNameDisplay = document.getElementById("schoolNameDisplay");
-
-  // Retrieve the school name from local storage
-  const schoolName = localStorage.getItem("schoolName");
-
-  // Display the school name if it exists
-  if (schoolName) {
-    schoolNameDisplay.textContent = `Logged in as: ${schoolName}`;
-  }
+  fetch("/auth/get-school-info")
+    .then((response) => response.json())
+    .then((data) => {
+      const schoolNameDisplay = document.getElementById("schoolNameDisplay");
+      if (data.schoolName) {
+        schoolNameDisplay.textContent = `Logged in as: ${data.schoolName}`;
+      } else {
+        schoolNameDisplay.textContent = "Not logged in";
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching school info:", error);
+    });
 });
