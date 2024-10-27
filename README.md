@@ -11,3 +11,5 @@ Steps to start the Web-App:
    - python3 -m http.server \*
 
 3. Start the MYSQL Server through the settings.
+
+registered in already registered school
