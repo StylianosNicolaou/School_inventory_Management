@@ -12,14 +12,27 @@ require("dotenv").config();
 //   password: process.env.DB_PASS || "Styl27072001",
 //   database: process.env.DB_NAME || "inventory",
 // });
-const db = mysql.createConnection({
+
+// const db = mysql.createConnection({
+//   host:
+//     process.env.DB_HOST || "school-inventory-school-inventory.c.aivencloud.com",
+//   user: process.env.DB_USER || "avnadmin",
+//   password: process.env.DB_PASS || "AVNS_ewFwe9d5gQz3SGmNn_6",
+//   database: process.env.DB_NAME || "defaultdb",
+//   port: process.env.DB_PORT || 15169, // Use Aiven's specific port if needed
+//   connectTimeout: 20000, // Set a 20-second timeout
+// });
+
+const db = mysql.createPool({
   host:
     process.env.DB_HOST || "school-inventory-school-inventory.c.aivencloud.com",
   user: process.env.DB_USER || "avnadmin",
   password: process.env.DB_PASS || "AVNS_ewFwe9d5gQz3SGmNn_6",
   database: process.env.DB_NAME || "defaultdb",
-  port: process.env.DB_PORT || 15169, // Use Aiven's specific port if needed
-  connectTimeout: 20000, // Set a 20-second timeout
+  port: process.env.DB_PORT || 15169,
+  waitForConnections: true,
+  connectionLimit: 10, // Limit the number of concurrent connections
+  connectTimeout: 20000, // Timeout duration in milliseconds
 });
 
 // Connect to the database
