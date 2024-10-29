@@ -107,7 +107,7 @@ app.use(
 // Session configuration
 app.use(
   session({
-    secret: process.env.SESSION_SECRET || "Styl27072001",
+    secret: process.env.SESSION_SECRET || "AVNS_ewFwe9d5gQz3SGmNn_6",
     resave: false,
     saveUninitialized: false,
     cookie: {
