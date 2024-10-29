@@ -1,23 +1,29 @@
 {
-  "version": 2,
-  "builds": [
+  ("version");
+  2, "builds";
+  [
     {
-      "src": "server.js",
-      "use": "@vercel/node" // Use Vercel's Node.js environment to run server.js
-    }
+      src: "server.js",
+      use: "@vercel/node",
+    },
   ],
-  "routes": [
+    "routes";
+  [
     {
-      "src": "/admin/login",
-      "dest": "/api/admin/login"
+      src: "/auth/register",
+      dest: "/api/auth/register",
     },
     {
-      "src": "/protected/(.*)",
-      "dest": "/protected/$1"
+      src: "/admin/login",
+      dest: "/api/admin/login",
     },
     {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ]
+      src: "/protected/(.*)",
+      dest: "/protected/$1",
+    },
+    {
+      src: "/(.*)",
+      dest: "/$1",
+    },
+  ];
 }
