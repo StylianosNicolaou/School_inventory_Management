@@ -37,7 +37,7 @@ document
 
     try {
       const response = await fetch(
-        "https://school-inv.vercel.app/admin/login",
+        "https://school-inventory-68f0c11dffed.herokuapp.com/admin/login",
         {
           method: "POST",
           headers: {
@@ -52,7 +52,7 @@ document
 
       if (response.ok) {
         window.location.href =
-          "https://school-inv.vercel.app/protected/admin.html"; // Redirect to the protected admin panel
+          "https://school-inventory-68f0c11dffed.herokuapp.com/protected/admin.html"; // Redirect to the protected admin panel
       } else {
         alert(result.message);
       }
