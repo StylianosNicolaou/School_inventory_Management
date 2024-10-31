@@ -38,7 +38,7 @@ document
     const password = document.getElementById("password").value;
 
     // Absolute path for Vercel compatibility
-    fetch(`${window.location.origin}/api/auth/register`, {
+    fetch(`${window.location.origin}/auth/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
