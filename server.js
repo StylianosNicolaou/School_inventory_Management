@@ -97,8 +97,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Enable CORS for all origins
 app.use(
   cors({
-    origin: "*", // Allow all origins
-    credentials: true, // Allow session cookies to be sent
+    origin: "https://school-inventory-68f0c11dffed.herokuapp.com", // Replace with your frontend URL
+    credentials: true, // Allow cookies and credentials
   })
 );
 
@@ -110,7 +110,8 @@ app.use(
     saveUninitialized: false,
     cookie: {
       secure: process.env.NODE_ENV === "production", // Only secure cookies in production
-      sameSite: "lax", // Helps with CORS and secure handling
+      sameSite: "None", // Required for cross-origin cookies
+      httpOnly: true,
     },
   })
 );
