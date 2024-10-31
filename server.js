@@ -77,7 +77,6 @@
 // app.listen(PORT, () => {
 //   console.log(`Server is running on http://localhost:${PORT}`);
 // });
-
 require("dotenv").config();
 const express = require("express");
 const session = require("express-session");
@@ -95,9 +94,10 @@ const PORT = process.env.PORT || 5006;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Enable CORS for the Vercel domain
+// Enable CORS for all origins
 app.use(
   cors({
+    origin: "*", // Allow all origins
     credentials: true, // Allow session cookies to be sent
   })
 );
