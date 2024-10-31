@@ -23,6 +23,12 @@ require("dotenv").config();
 //   connectTimeout: 20000, // Set a 20-second timeout
 // });
 
+const mysql = require("mysql2");
+const csv = require("csv-parser");
+const fs = require("fs");
+const path = require("path");
+
+// Create a connection pool
 const db = mysql.createPool({
   host:
     process.env.DB_HOST || "school-inventory-school-inventory.c.aivencloud.com",
@@ -31,23 +37,23 @@ const db = mysql.createPool({
   database: process.env.DB_NAME || "defaultdb",
   port: process.env.DB_PORT || 15169,
   waitForConnections: true,
-  connectionLimit: 10, // Limit the number of concurrent connections
-  connectTimeout: 20000, // Timeout duration in milliseconds
+  connectionLimit: 10,
+  connectTimeout: 20000,
 });
 
-// Connect to the database
-db.connect((err) => {
+// Test a sample query to ensure the connection is working
+db.query("SELECT 1", (err) => {
   if (err) {
-    console.error("Error connecting to the database:", err.stack);
-    return;
+    console.error("Error connecting to the MySQL database:", err.stack);
+  } else {
+    console.log("Connected to the MySQL database.");
   }
-  console.log("Connected to the MySQL database.");
 });
 
-// Function to load products from CSV and insert into the database
+// Function to load products from CSV and insert them into the database
 function loadProductsFromCSV(callback) {
   const products = [];
-  fs.createReadStream(path.join(__dirname, "../products_with_images.csv")) // Adjust the path here
+  fs.createReadStream(path.join(__dirname, "../products_with_images.csv"))
     .pipe(csv())
     .on("data", (row) => {
       products.push(row);
@@ -59,12 +65,7 @@ function loadProductsFromCSV(callback) {
             "INSERT INTO products (id, name, description, image) VALUES (?, ?, ?, ?)";
           db.query(
             query,
-            [
-              product.id, // Ensure you have the correct column for id from your CSV
-              product.name,
-              product.description,
-              product.image,
-            ],
+            [product.id, product.name, product.description, product.image],
             (err) => {
               if (err) return reject(err);
               resolve();
@@ -77,7 +78,7 @@ function loadProductsFromCSV(callback) {
       Promise.all(insertQueries)
         .then(() => {
           console.log("Products loaded into the database.");
-          callback(products);
+          if (callback) callback(products);
         })
         .catch((err) => {
           console.error("Error inserting products:", err);
@@ -85,7 +86,7 @@ function loadProductsFromCSV(callback) {
     });
 }
 
-// Export both the db connection and the CSV loading function properly
+// Export both the db connection and the CSV loading function
 module.exports = {
   db,
   loadProductsFromCSV,
