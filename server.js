@@ -102,6 +102,21 @@ app.use(
   })
 );
 
+// Add middleware to ensure headers are set on every response
+app.use((req, res, next) => {
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://school-inventory-68f0c11dffed.herokuapp.com"
+  );
+  res.header("Access-Control-Allow-Credentials", "true");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
 // Session configuration
 app.use(
   session({
@@ -115,6 +130,14 @@ app.use(
     },
   })
 );
+// Body parser and other middlewares
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Sample route for testing
+app.get("/test-cors", (req, res) => {
+  res.send("CORS headers set");
+});
 
 // Serve public and protected directories
 app.use(express.static(path.join(__dirname, "public")));
