@@ -1,9 +1,9 @@
 // db.js
-const mysql = require("mysql2");
-const fs = require("fs");
-const path = require("path");
-const csv = require("csv-parser"); // Ensure this package is installed
-require("dotenv").config();
+// const mysql = require("mysql2");
+// const fs = require("fs");
+// const path = require("path");
+// const csv = require("csv-parser"); // Ensure this package is installed
+// require("dotenv").config();
 
 // Create the MySQL connection
 // const db = mysql.createConnection({
