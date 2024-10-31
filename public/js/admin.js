@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Fetch and display the list of schools
-  fetch("/admin/schools")
+  fetch("https://school-inventory-68f0c11dffed.herokuapp.com/admin/schools", {
+    method: "GET",
+    credentials: "include", // Include credentials for session authentication
+  })
     .then((response) => {
       if (!response.ok) {
         throw new Error("Failed to fetch schools");
@@ -30,7 +33,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to fetch and display a school's inventory
   window.viewInventory = function (schoolName) {
-    fetch(`/admin/inventory/${schoolName}`)
+    fetch(
+      `https://school-inventory-68f0c11dffed.herokuapp.com/admin/inventory/${schoolName}`,
+      {
+        method: "GET",
+        credentials: "include", // Include credentials for session authentication
+      }
+    )
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch inventory");
