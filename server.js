@@ -98,7 +98,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Enable CORS for the Vercel domain
 app.use(
   cors({
-    origin: VERCEL_URL,
     credentials: true, // Allow session cookies to be sent
   })
 );
