@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Fetch and display the list of schools
-  fetch("https://school-inventory-68f0c11dffed.herokuapp.com/admin/schools", {
+  fetch("/admin/schools", {
     method: "GET",
     credentials: "include", // Include credentials for session authentication
   })
