@@ -5,6 +5,9 @@
   "scripts": {
     "start": "node server.js"
   },
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "aceternity-ui": "^0.2.2",
     "bcrypt": "^5.1.1",
@@ -20,9 +23,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^3.11.3",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
-  },
-  "devDependencies": {
+    "tailwindcss-animate": "^1.0.7",
     "tailwindcss": "^3.4.14"
   }
 }

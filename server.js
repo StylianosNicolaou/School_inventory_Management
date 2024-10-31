@@ -91,7 +91,6 @@ const adminRoutes = require("./routes/admin");
 
 const app = express();
 const PORT = process.env.PORT || 5006;
-const VERCEL_URL = "https://school-inv.vercel.app";
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
