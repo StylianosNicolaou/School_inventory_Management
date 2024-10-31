@@ -1,5 +1,5 @@
 // createAdmin.js
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const { db } = require("./db"); // Reusing the db connection from db.js
 
 const saltRounds = 10;
