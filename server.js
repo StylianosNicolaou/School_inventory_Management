@@ -217,12 +217,12 @@ app.use(
 // Session configuration
 app.use(
   session({
-    secret: process.env.SESSION_SECRET || "default_secret", // Set SESSION_SECRET in Heroku Config Vars
+    secret: process.env.SESSION_SECRET || "Styl737689", // Set SESSION_SECRET in Heroku Config Vars
     resave: false,
     saveUninitialized: false,
     cookie: {
       secure: process.env.NODE_ENV === "production",
-      sameSite: "None",
+      sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",
       httpOnly: true,
     },
   })

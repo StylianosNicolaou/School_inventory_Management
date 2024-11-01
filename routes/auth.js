@@ -97,15 +97,26 @@ const { db } = require("../models/db");
 router.post("/register", (req, res) => {
   const { school_name, email, password } = req.body;
 
-  // Sample registration logic
+  // Basic input validation check
+  if (!school_name || !email || !password) {
+    console.error("Missing fields in registration data.");
+    return res.status(400).json({ message: "All fields are required." });
+  }
+
   const query =
     "INSERT INTO schools (school_name, email, password) VALUES (?, ?, ?)";
-  db.query(query, [school_name, email, password], (err) => {
+
+  // Add logging to check database query execution
+  db.query(query, [school_name, email, password], (err, results) => {
     if (err) {
-      console.error("Error registering school:", err);
-      return res.status(500).json({ message: "Registration failed." });
+      console.error("Database error during registration:", err); // Log the exact error
+      return res
+        .status(500)
+        .json({ message: "Registration failed due to a database error." });
     }
+
     req.session.schoolName = school_name;
+    console.log("Registration successful for school:", school_name);
     res
       .status(200)
       .json({ message: "School registered and logged in successfully." });
