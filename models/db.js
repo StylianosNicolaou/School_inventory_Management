@@ -95,7 +95,6 @@
 
 // V3
 const mysql = require("mysql2");
-require("dotenv").config();
 
 const db = mysql.createPool({
   host: process.env.DB_HOST,
@@ -105,7 +104,10 @@ const db = mysql.createPool({
   port: process.env.DB_PORT,
   waitForConnections: true,
   connectionLimit: 10,
-  connectTimeout: 20000,
+  connectTimeout: 30000,
+  ssl: {
+    rejectUnauthorized: true, // May vary by provider
+  },
 });
 
 module.exports = { db };
