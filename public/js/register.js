@@ -84,11 +84,14 @@ document
       body: JSON.stringify({ school_name, email, password }),
     })
       .then(async (response) => {
+        const responseBody = await response.text();
+        console.log("Response body:", responseBody); // Log the full response for debugging
+
         if (!response.ok) {
-          const text = await response.text();
-          throw new Error(`Failed to register: ${text}`);
+          throw new Error(`Failed to register: ${responseBody}`);
         }
-        return response.json();
+
+        return JSON.parse(responseBody); // Parse the JSON response
       })
       .then((data) => {
         if (data.message === "School registered and logged in successfully.") {
@@ -98,7 +101,7 @@ document
         }
       })
       .catch((error) => {
-        console.error("Error:", error.message || error);
+        console.error("Error during registration:", error.message || error);
         alert("An error occurred during registration. Please try again.");
       });
   });
